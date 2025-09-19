@@ -1,0 +1,110 @@
+trading-bot-v6/
+├── src/
+│   ├── analysis/
+│   │   ├── technical-analysis.ts
+│   │   ├── indicators/
+│   │   │   ├── sma.ts
+│   │   │   ├── rsi.ts
+│   │   │   ├── macd.ts
+│   │   │   └── bollinger-bands.ts
+│   │   └── patterns/
+│   │       ├── candlestick-patterns.ts
+│   │       └── chart-patterns.ts
+│   │
+│   ├── config/
+│   │   ├── config-manager.ts
+│   │   ├── trading-config.ts
+│   │   ├── exchange-config.ts
+│   │   └── strategy-config.ts
+│   │
+│   ├── data/
+│   │   ├── data-collector.ts
+│   │   ├── data-storage.ts
+│   │   ├── price-feed.ts
+│   │   └── historical-data.ts
+│   │
+│   ├── exchange/
+│   │   ├── gateio-client.ts
+│   │   ├── api/
+│   │   │   ├── rest-client.ts
+│   │   │   ├── websocket-client.ts
+│   │   │   └── types.ts
+│   │   └── order-manager.ts
+│   │
+│   ├── strategies/
+│   │   ├── strategy-manager.ts
+│   │   ├── base-strategy.ts
+│   │   ├── implementations/
+│   │   │   ├── scalping-strategy.ts
+│   │   │   ├── swing-strategy.ts
+│   │   │   ├── dca-strategy.ts
+│   │   │   └── grid-strategy.ts
+│   │   └── signals/
+│   │       ├── signal-generator.ts
+│   │       └── signal-validator.ts
+│   │
+│   ├── trading/
+│   │   ├── trading-engine.ts
+│   │   ├── risk-manager.ts
+│   │   ├── portfolio-manager.ts
+│   │   ├── position-manager.ts
+│   │   └── execution-engine.ts
+│   │
+│   ├── ui/
+│   │   ├── ui-manager.ts
+│   │   ├── dashboard.ts
+│   │   ├── charts/
+│   │   │   ├── price-chart.ts
+│   │   │   ├── portfolio-chart.ts
+│   │   │   └── performance-chart.ts
+│   │   └── menus/
+│   │       ├── main-menu.ts
+│   │       ├── trading-menu.ts
+│   │       └── settings-menu.ts
+│   │
+│   ├── utils/
+│   │   ├── logger.ts
+│   │   ├── event-bus.ts
+│   │   ├── helpers.ts
+│   │   ├── validators.ts
+│   │   └── formatters.ts
+│   │
+│   └── types/
+│       ├── trading.ts
+│       ├── exchange.ts
+│       ├── strategy.ts
+│       └── ui.ts
+│
+├── config/
+│   ├── default.json
+│   ├── development.json
+│   ├── production.json
+│   └── strategies.json
+│
+├── data/
+│   ├── logs/
+│   ├── backtest/
+│   └── history/
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+│
+├── docs/
+│   ├── README.md
+│   ├── CHANGELOG.md
+│   ├── API.md
+│   └── DEPLOYMENT.md
+│
+├── scripts/
+│   ├── build.sh
+│   ├── deploy.sh
+│   └── test.sh
+│
+├── .env.example
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── index.ts
+└── README.md

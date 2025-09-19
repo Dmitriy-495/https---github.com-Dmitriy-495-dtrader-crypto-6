@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "Trading Bot v6",
+    "version": "6.0.0",
+    "env": "development",
+    "logLevel": "info"
+  },
+  "exchange": {
+    "name": "gateio",
+    "apiUrl": "https://api.gateio.ws/api/v4",
+    "wsUrl": "wss://api.gateio.ws/ws/v4/",
+    "sandbox": true,
+    "timeout": 10000,
+    "rateLimit": 100
+  },
+  "trading": {
+    "defaultPair": "BTC/USDT",
+    "baseCurrency": "USDT",
+    "maxPositionSize": 1000,
+    "minTradeAmount": 10,
+    "riskPercentage": 2,
+    "stopLossPercentage": 1,
+    "takeProfitPercentage": 2,
+    "maxOpenPositions": 5
+  },
+  "strategies": {
+    "default": "scalping",
+    "enabled": ["scalping", "dca"],
+    "scalping": {
+      "timeframe": "1m",
+      "rsiPeriod": 14,
+      "rsiOverbought": 70,
+      "rsiOversold": 30
+    },
+    "dca": {
+      "timeframe": "1h",
+      "buyInterval": 3600000,
+      "maxOrders": 10,
+      "stepPercentage": 2
+    }
+  },
+  "analysis": {
+    "indicators": {
+      "sma": { "periods": [20, 50, 200] },
+      "rsi": { "period": 14 },
+      "macd": { "fast": 12, "slow": 26, "signal": 9 },
+      "bollinger": { "period": 20, "stdDev": 2 }
+    }
+  },
+  "ui": {
+    "refreshInterval": 1000,
+    "terminalWidth": 120,
+    "terminalHeight": 40,
+    "colorScheme": "dark",
+    "showCharts": true
+  },
+  "data": {
+    "storage": {
+      "type": "file",
+      "path": "./data/history",
+      "maxFileSize": "10MB",
+      "retention": "30d"
+    },
+    "feeds": {
+      "price": true,
+      "orderbook": true,
+      "trades": false
+    }
+  }
+}

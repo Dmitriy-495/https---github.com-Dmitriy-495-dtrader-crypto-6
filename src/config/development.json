@@ -1,0 +1,16 @@
+{
+  "app": {
+    "logLevel": "debug"
+  },
+  "exchange": {
+    "sandbox": true,
+    "timeout": 5000
+  },
+  "trading": {
+    "maxPositionSize": 100,
+    "riskPercentage": 1
+  },
+  "ui": {
+    "refreshInterval": 500
+  }
+}

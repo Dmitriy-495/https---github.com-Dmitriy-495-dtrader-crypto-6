@@ -1,0 +1,18 @@
+{
+  "app": {
+    "env": "production",
+    "logLevel": "info"
+  },
+  "exchange": {
+    "sandbox": false,
+    "timeout": 15000,
+    "rateLimit": 50
+  },
+  "trading": {
+    "maxPositionSize": 5000,
+    "riskPercentage": 1.5
+  },
+  "ui": {
+    "refreshInterval": 2000
+  }
+}
